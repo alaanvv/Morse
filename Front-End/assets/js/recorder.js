@@ -27,6 +27,11 @@ const recorder = {
   },
 
   stopRecording: () => {
+    // Send code
+    if (recorder.code % 2 === 0) recorder.code.pop()
+    backend.sendCode(recorder.code)
+    
+    // Reset stuff
     display.clear()
     
     window.onkeydown = undefined
@@ -35,10 +40,6 @@ const recorder = {
     recorder.lastAction = undefined
     recorder.code = []
     recorder.beep = undefined
-
-    if (recorder.code % 2 === 0) recorder.code.pop()
-
-    backend.sendCode(code)
   },
 
   onclick: () => {

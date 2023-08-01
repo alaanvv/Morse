@@ -13,6 +13,10 @@ const player = {
       await new Promise(resolve => setTimeout(resolve, player.code[i]))
     }
 
+    player.stopPlaying()
+  },
+
+  stopPlaying: () => {
     display.write('Ended')
     setTimeout(display.clear, 1e3)
     player.dom.removeAttribute('pressed')
