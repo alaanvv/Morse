@@ -19,6 +19,7 @@
 - Record and send your morse code to a global database  
 - Get a random morse code without any details from where
 it comes
+- Save a kidnaped kid  
 - Train your encrypting and decrypting skills
 
 # Add/Fix
