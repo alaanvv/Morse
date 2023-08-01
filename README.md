@@ -28,5 +28,5 @@ it comes
 
 ---
 
-> I made it in a few hours, so
-<img src='https://media.tenor.com/NEYR3oRmkLYAAAAd/im-only-human-im-only-human-after-all.gif'>
+> I made it in a few hours, so  
+> <img src='https://media.tenor.com/NEYR3oRmkLYAAAAd/im-only-human-im-only-human-after-all.gif'>
