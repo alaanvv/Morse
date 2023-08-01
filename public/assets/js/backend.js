@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:667/'
+const apiUrl = '/'
 
 function _fetch(endpoint, method, body = undefined) {
   const options = { method: method, headers: new Headers({ 'content-type': 'application/json' }) }
