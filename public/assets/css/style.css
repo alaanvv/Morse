@@ -1,0 +1,146 @@
+:root {
+  --bgc: #85795d;
+
+  --machine-color: #788692;
+
+  --display-color: #416b52;
+  --display-text-color: #bdd4c7;
+
+  --button-color: #8699a9;
+  --button-text-color: #52545b;
+
+  --note-color: #dacccc;
+}
+
+@font-face {
+  font-family: 'Machine';
+  src: url('../fnt/LEDCalculator.ttf') format('woff2');
+}
+@font-face {
+  font-family: 'Hand';
+  src: url('../fnt/Lazy\ Monday.otf') format('woff2');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*  */
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/*  */
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 3em 10em;
+
+  background-color: var(--bgc);
+  box-shadow: inset 0 0 100px 10px #000;
+
+  user-select: none;
+}
+
+/*  */
+
+.machine {
+  display: flex;
+  gap: 100px;
+  
+  width: 100%;
+  max-width: 1200px;
+  height: 250px;
+  padding: 50px;
+  margin: 0 auto;
+  border: 5px solid #0005;
+  border-radius: 7px;
+
+  box-shadow: 0 0 50px 0 #000;
+
+  background-color: var(--machine-color);
+}
+
+.display {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-grow: 1;
+
+  height: 100%;
+  padding: 0 20px;
+  border-radius: 3px;
+
+  background-color: var(--display-color);
+  box-shadow: inset 0 0 0 4px #0003;
+
+  font-family: 'Machine';
+  font-size: 5em;
+  color: var(--display-text-color);
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  color: var(--button-text-color);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 20px;
+  border: 3px solid #0006;
+
+  background-color: var(--button-color);
+
+  cursor: pointer;
+}
+
+.button[pressed] {
+  box-shadow: inset 0 0 0 4px;
+}
+
+/*  */
+
+.notes {
+  display: flex;
+  gap: 100px;
+
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.note {
+  width: 50%;
+  padding: 50px;
+
+  background-color: var(--note-color);
+  box-shadow: 0 0 1px 1px #000;
+
+  font-family: 'Hand';
+  font-size: 2.5em;
+}
+.note:focus-visible {
+  outline: none;
+}
+
+.guide p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
