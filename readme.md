@@ -19,7 +19,7 @@
 - Record and send your morse code to a global database  
 - Get a random morse code without any details from where
 it comes
-- Save a kidnaped kid  
+- Save a kidnapped kid  
 - Train your encrypting and decrypting skills
 
 # Add/Fix
@@ -29,4 +29,4 @@ it comes
 ---
 
 > I made it in a few hours, so  
-> <img src='https://media.tenor.com/NEYR3oRmkLYAAAAd/im-only-human-im-only-human-after-all.gif'>
+> <img width='200px' src='https://media.tenor.com/NEYR3oRmkLYAAAAd/im-only-human-im-only-human-after-all.gif'>
