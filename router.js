@@ -1,5 +1,5 @@
-const Router = require('express').Router
 const Database = require('./database.js')
+const { Router } = require('express')
 require('dotenv').config()
 
 const router = new Router()
