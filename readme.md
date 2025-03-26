@@ -1,5 +1,5 @@
 <div align='center'>
-  <img src='https://github.com/alaanvv/Image-Database/blob/main/Morse/playing.png?raw=true'>
+  <img src='https://github.com/alaanvv/Image-Database/blob/main/Morse/morse.png?raw=true'>
 
   <br>
   
