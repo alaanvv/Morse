@@ -4,11 +4,13 @@ const player = {
   code: [],
 
   play: async () => {
+    document.querySelector('.personal').focus()
     display.write('Loading')
     player.code = await backend.getCode()
     display.write('Playing')
 
     for (let i = 0; i < player.code.length; i++) {
+      if (player.dom.getAttribute('pressed') === null) return
       if (i % 2 === 0) machine.beep(player.code[i])
       await new Promise(resolve => setTimeout(resolve, player.code[i]))
     }
@@ -23,7 +25,13 @@ const player = {
   },
 
   onclick: () => {
-    if (player.dom.getAttribute('pressed') !== null || recorder.dom.getAttribute('pressed') !== null) return
+    if (recorder.dom.getAttribute('pressed') !== null) return
+    if (player.dom.getAttribute('pressed') !== null) {
+      player.dom.removeAttribute('pressed')
+      display.clear()
+      machine.stop()
+      return
+    }
 
     player.dom.setAttribute('pressed', '')
 

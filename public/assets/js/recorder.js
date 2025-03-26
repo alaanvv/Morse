@@ -7,9 +7,11 @@ const recorder = {
   beep: undefined,
 
   record: () => {
-    display.write('Recording')
+    display.write('SPACE TO BEEP')
 
     const handleAction = e => {
+      display.write('RECORDING')
+
       if (e.key !== ' ' || e.repeat) return
 
       if (recorder.lastAction) recorder.code.push(Date.now() - recorder.lastAction)

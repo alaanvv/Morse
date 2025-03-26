@@ -1,23 +1,21 @@
-const apiUrl = '/'
-
-function _fetch(endpoint, method, body = undefined) {
-  const options = { method: method, headers: new Headers({ 'content-type': 'application/json' }) }
+function _fetch(endpoint, method, body) {
+  const options = { method, headers: new Headers({ 'content-type': 'application/json' }) }
   if (body) options.body = JSON.stringify(body)
 
-  return fetch(`${apiUrl}${endpoint}`, options)
+  return fetch(endpoint, options)
     .then(res => res.text())
     .then(json => JSON.parse(json))
 }
 
 const backend = {
-  sendCode: codeArr => {
-    _fetch('post-code', 'POST', codeArr)
+  sendCode: code => {
+    _fetch('/post-code', 'POST', code)
   },
 
-  getCode: async () => {
+  getCode: async _ => {
     return new Promise(async resolve => {
-      const minDelay = new Promise(resolve => setTimeout(resolve, 1e3))
-      const [_, codes] = await Promise.all([minDelay, _fetch('get-code', 'GET')])
+      const delay = new Promise(resolve => setTimeout(resolve, 500))
+      const codes = (await Promise.all([delay, _fetch('/get-code', 'GET')]))[1]
 
       if (!codes[0]) {
         display.write('No messages')
